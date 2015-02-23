@@ -2,7 +2,7 @@
 
 namespace StackOverFlow.Domain.Entities
 {
-    class Account : IEntity
+   public class Account : IEntity
     {
         public Guid Id { get; private set; }
         public string Name { get; set; }

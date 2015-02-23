@@ -1,28 +1,20 @@
-﻿@model StackoverFlow.Web.Models.AccountRegisterModel
+﻿@model StackoverFlow.Web.Models.AccountLoginModel
 
 @{
-    ViewBag.Title = "Register";
+    ViewBag.Title = "login";
 }
 
-<h2>Register</h2>
+<h2>login</h2>
 
 
 @using (Html.BeginForm()) 
 {
- 
+  
     
     <div class="form-horizontal">
-        <h4>AccountRegisterModel</h4>
+        <h4>AccountLoginModel</h4>
         <hr />
         @Html.ValidationSummary(true)
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Name, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Name)
-                @Html.ValidationMessageFor(model => model.Name)
-            </div>
-        </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.Email, new { @class = "control-label col-md-2" })
@@ -41,24 +33,22 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.ConfirmPassword, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.ConfirmPassword)
-                @Html.ValidationMessageFor(model => model.ConfirmPassword)
-            </div>
-        </div>
-
-        <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Login" class="btn btn-default" />
             </div>
         </div>
     </div>
 }
 
-@*<div>
+<div>
+    @Html.ActionLink("Forgot your password", "ForgotPassword");
+</div>
+
+<div>
+
     @Html.ActionLink("Back to List", "Index")
-</div>*@
+</div>
+
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

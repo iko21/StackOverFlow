@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackoverFlow.Web", "Stacko
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackOverFlow.Domain", "StackOverFlow.Domain\StackOverFlow.Domain.csproj", "{CFAAC0F1-5C02-4C01-9DE2-9CACFD3D5B30}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackOverflow.Data", "StackOverflow.Data\StackOverflow.Data.csproj", "{981AA8DB-739D-4F51-A954-B9BDB3902B9D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CFAAC0F1-5C02-4C01-9DE2-9CACFD3D5B30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFAAC0F1-5C02-4C01-9DE2-9CACFD3D5B30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFAAC0F1-5C02-4C01-9DE2-9CACFD3D5B30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{981AA8DB-739D-4F51-A954-B9BDB3902B9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{981AA8DB-739D-4F51-A954-B9BDB3902B9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{981AA8DB-739D-4F51-A954-B9BDB3902B9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{981AA8DB-739D-4F51-A954-B9BDB3902B9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
