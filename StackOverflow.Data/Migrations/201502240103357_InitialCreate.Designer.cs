@@ -13,7 +13,7 @@ namespace StackOverflow.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201502210237285_InitialCreate"; }
+            get { return "201502240103357_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source

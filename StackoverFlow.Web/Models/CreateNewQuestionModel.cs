@@ -6,7 +6,7 @@ using System.Web;
 
 namespace StackoverFlow.Web.Models
 {
-    public class CreateNewQuestion
+    public class CreateNewQuestionModel
     {
         public string Title { get; set; }
 

@@ -8,6 +8,7 @@ using System.Web.Routing;
 using Autofac;
 using AutoMapper;
 using StackoverFlow.Web.Models;
+using StackOverflow.Data;
 using StackOverFlow.Domain.Entities;
 
 namespace StackoverFlow.Web
@@ -20,16 +21,19 @@ namespace StackoverFlow.Web
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            AutoFacConfig.Register();
         }
     }
 
     public static class AutoFacConfig
     {
+        public static IContainer Container;
         public static void Register()
         {
             var builder = new ContainerBuilder();
             builder.Register(c => Mapper.Engine).As<IMappingEngine>();
-            var container = builder.Build();
+            builder.Register(c => new StackOverflowContext()).As<StackOverflowContext>();
+            Container = builder.Build();
         }
     }
 
@@ -38,6 +42,7 @@ namespace StackoverFlow.Web
         public static void RegisterMaps()
         {
             Mapper.CreateMap<AccountRegisterModel, Account>().ReverseMap();
+            Mapper.CreateMap<Question, QuestionListModel>().ReverseMap();
         }
     }
 }
