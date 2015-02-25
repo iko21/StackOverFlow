@@ -58,5 +58,14 @@ namespace StackoverFlow.Web.Controllers
 
             return View("ForgotPassword");
         }
+
+        public ActionResult Profile(Guid ownerId)
+        {
+            var context = new StackOverflowContext();
+            AutoMapper.Mapper.CreateMap<Account, ProfileModel>();
+            var owner = context.Accounts.Find(ownerId);
+            var model = AutoMapper.Mapper.Map<Account, ProfileModel>(owner);
+            return View(model);
+        }
     }
 }

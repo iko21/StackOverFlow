@@ -30,7 +30,8 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.ActionLink(item.Title, "Detail",new{id=item.QuestionId})
+            @Html.ActionLink(item.Title, "Detail",new{questionId=item.QuestionId},null)
+            
             @*Html.DisplayFor(modelItem => item.Title)*@
         </td>
         <td>
@@ -40,7 +41,7 @@
             @Html.DisplayFor(modelItem => item.CreationDate)
         </td>
         <td>
-            @Html.ActionLink(item.OwnerName,"Profile", "Account", new {id=item.OwnerId},null)
+            @Html.ActionLink(item.OwnerName,"Profile", "Account", new {ownerId=item.OwnerId},null)
             
         </td>
         <td>

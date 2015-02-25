@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using Antlr.Runtime.Misc;
 using Autofac;
+
 using StackoverFlow.Web.Models;
 using StackOverflow.Data;
 using StackOverFlow.Domain.Entities;
@@ -57,6 +58,17 @@ namespace StackoverFlow.Web.Controllers
                 return RedirectToAction("index");
             }
             return View(model);
+        }
+
+        
+        public ActionResult Detail(Guid questionId)
+        {
+            AutoMapper.Mapper.CreateMap<Question, Detalles>();       
+            var context = new StackOverflowContext();
+            var question = context.Questions.Find(questionId);      
+            var detalles = AutoMapper.Mapper.Map<Question, Detalles>(question);
+
+            return View(detalles);
         }
         
 	}

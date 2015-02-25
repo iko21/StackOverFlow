@@ -138,6 +138,8 @@
     <Compile Include="Models\AccountRegisterModel.cs" />
     <Compile Include="Models\AccountLoginModel.cs" />
     <Compile Include="Models\CreateNewQuestionModel.cs" />
+    <Compile Include="Models\Detalles.cs" />
+    <Compile Include="Models\ProfileModel.cs" />
     <Compile Include="Models\QuestionListModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -179,6 +181,8 @@
     <Content Include="Views\Question\Index.cshtml" />
     <Content Include="Views\Account\ForgotPassword.cshtml" />
     <Content Include="Views\Question\Question.cshtml" />
+    <Content Include="Views\Question\Detail.cshtml" />
+    <Content Include="Views\Account\Profile.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StackOverflow.Data\StackOverflow.Data.csproj">
