@@ -31,6 +31,7 @@ namespace StackoverFlow.Web.Controllers
             QuestionListModel MODELtEST = AutoMapper.Mapper.Map<Question, QuestionListModel>(question);
             Account owner = context3.Accounts.Find(question.OwnerId);
             MODELtEST.OwnerName = owner.Name;
+            MODELtEST.QuestionId = question.Id;
             models.Add(MODELtEST);
         }
         
@@ -70,6 +71,8 @@ namespace StackoverFlow.Web.Controllers
 
             return View(detalles);
         }
+
+        
         
 	}
 }

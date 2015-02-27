@@ -30,7 +30,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.ActionLink(item.Title, "Detail",new{questionId=item.QuestionId},null)
+            @Html.ActionLink(item.Title, "Detail","Question" ,new{questionId=item.QuestionId},null)
             
             @*Html.DisplayFor(modelItem => item.Title)*@
         </td>
