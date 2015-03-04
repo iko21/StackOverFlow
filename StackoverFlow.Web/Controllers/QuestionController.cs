@@ -22,6 +22,7 @@ namespace StackoverFlow.Web.Controllers
         {
 
             var context3 = AutoFacConfig.Container.Resolve<StackOverflowContext>();
+            var context=new StackOverflowContext();
             var entities = context3.Questions.ToList();
             AutoMapper.Mapper.CreateMap<Question, QuestionListModel>().ReverseMap();
             List<QuestionListModel> models = new List<QuestionListModel>();

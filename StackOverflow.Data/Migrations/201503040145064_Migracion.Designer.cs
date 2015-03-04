@@ -7,13 +7,13 @@ namespace StackOverflow.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.2-31219")]
-    public sealed partial class InitialCreate : IMigrationMetadata
+    public sealed partial class Migracion : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialCreate));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Migracion));
         
         string IMigrationMetadata.Id
         {
-            get { return "201502240103357_InitialCreate"; }
+            get { return "201503040145064_Migracion"; }
         }
         
         string IMigrationMetadata.Source
