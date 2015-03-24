@@ -58,15 +58,28 @@
             @Html.DisplayFor(model => model.OwnerId)
         </dd>
 
-        <dt>
-          @*  @Html.DisplayNameFor(model => model.QuestionId)*@
-        </dt>
+        <div class="form-group">
+            @if (Context.User.Identity.IsAuthenticated)
+            {
+                @Html.LabelFor(model => model.Answer, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextAreaFor(model => model.Answer)
+                    @Html.ValidationMessageFor(model => model.Answer)
+                </div>
+            }
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Ok" class="btn btn-default" />
+                </div>
+                <dt>
+                    @*  @Html.DisplayNameFor(model => model.QuestionId)*@
+                </dt>
 
-        <dd>
-            @*@Html.DisplayFor(model => model.QuestionId)*@
-        </dd>
+                <dd>
+                    @*@Html.DisplayFor(model => model.QuestionId)*@
+                </dd>
 
-    </dl>
+</dl>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |

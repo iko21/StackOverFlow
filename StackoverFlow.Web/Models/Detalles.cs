@@ -15,5 +15,6 @@ namespace StackoverFlow.Web.Models
         public string OwnerName { get; set; }
         public Guid OwnerId { get; set; }
         public Guid QuestionId { get; set; }
+        public string Answer { get; set; }
     }
 }

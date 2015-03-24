@@ -73,7 +73,6 @@ namespace StackoverFlow.Web.Controllers
             return View(detalles);
         }
 
-        
-        
+       
 	}
 }
